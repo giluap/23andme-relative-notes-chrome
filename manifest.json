@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "23andMe Relatives - Inline Notes",
+  "version": "1.0.0",
+  "description": "Shows each DNA relative's saved note inline, right after their name in the DNA Relatives list.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://you.23andme.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://you.23andme.com/*"],
+      "js": ["config.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
